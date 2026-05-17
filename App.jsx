@@ -1,17 +1,17 @@
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useAuth } from './hooks/useAuth'
-import Nav from './components/Nav'
-import Footer from './components/Footer'
-import LandingPage  from './pages/LandingPage'
-import AuthPage     from './pages/AuthPage'
-import AppPage      from './pages/AppPage'
-import PricingPage  from './pages/PricingPage'
-import FeaturesPage from './pages/FeaturesPage'
-import AboutPage    from './pages/AboutPage'
-import TermsPage    from './pages/TermsPage'
-import PrivacyPage  from './pages/PrivacyPage'
 
+import Nav from './Nav.jsx'
+import Footer from './Footer.jsx'
+import LandingPage from './LandingPage.jsx'
+import AuthPage from './AuthPage.jsx'
+import AppPage from './AppPage.jsx'
+import PricingPage from './PricingPage.jsx'
+import FeaturesPage from './FeaturesPage.jsx'
+import AboutPage from './AboutPage.jsx'
+import TermsPage from './TermsPage.jsx'
+import PrivacyPage from './PrivacyPage.jsx'
 function ScrollTop() {
   var loc = useLocation()
   useEffect(function() { window.scrollTo(0, 0) }, [loc.pathname])
