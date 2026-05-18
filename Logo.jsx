@@ -16,7 +16,7 @@ export default function Logo({ size }) {
           flexShrink: 0,
         }}
       >
-        🍳
+        🍽️
       </div>
       <span
         style={{
