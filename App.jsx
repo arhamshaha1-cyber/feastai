@@ -31,8 +31,7 @@ export default function App() {
         <div style={{ fontSize: 48, animation: 'spin 1s linear infinite' }}>🍳</div>
         <p style={{ color: '#9CA3AF', fontFamily: "'DM Sans',sans-serif" }}>Loading FeastAI…</p>
         <style>{'@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}'}</style>
-      </div>
-    )
+      </div
   }
 
   var hideFooter = location.pathname === '/app'
