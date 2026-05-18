@@ -28,10 +28,10 @@ export default function App() {
         minHeight: '100vh', display: 'flex', alignItems: 'center',
         justifyContent: 'center', background: '#0A0A0F', flexDirection: 'column', gap: 16,
       }}>
-        <div style={{ fontSize: 48, animation: 'spin 1s linear infinite' }}>🍳</div>
-        <p style={{ color: '#9CA3AF', fontFamily: "'DM Sans',sans-serif" }}>Loading FeastAI…</p>
-        <style>{'@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}'}</style>
-      </div
+        <div style={{ fontSize: 48 }}>🍽️</div>
+        <p style={{ color: '#9CA3AF', fontFamily: '"DM Sans", sans-serif' }}>Loading FeastAI...</p>
+        </div>
+      
   }
 
   var hideFooter = location.pathname === '/app'
