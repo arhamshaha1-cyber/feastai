@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import { useAuth } from './useAuth'
+import useAuth from './useAuth.js'
 
 import Nav from './Nav.jsx'
 import Footer from './Footer.jsx'
