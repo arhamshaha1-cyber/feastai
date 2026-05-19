@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { PLANS, btnPrimary, btnGhost } from '../styles/theme'
+import { PLANS, btnPrimary, btnGhost } from './theme.js'
 
 var FAQ = [
   { q: 'Can I cancel anytime?',                  a: 'Yes. Cancel from account settings at any time. You keep access until the end of your billing period.' },
