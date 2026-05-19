@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { generateRecipes } from '../lib/anthropic'
+import { generateRecipes } from './anthropic.js'
 import { RecipeCard, RecipeDetail } from '../components/RecipeCard'
 import { CUISINES, QUICK_INGREDIENTS, btnPrimary, btnGhost } from '../styles/theme'
 
