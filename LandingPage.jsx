@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { btnPrimary, btnGhost } from '../styles/theme'
+import { btnPrimary, btnGhost } from './theme.js'
 
 var FEATURES = [
   { icon: '🤖', title: 'Claude AI Recipe Engine',   desc: "Powered by Anthropic's Claude. Understands cultural nuances and cooking techniques across all major world cuisines." },
