@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 import Logo from './Logo'
-import { btnPrimary, btnGhost } from '../styles/theme'
+import { btnPrimary, btnGhost } from './theme.js'
 
 var NAV_LINKS = [
   { label: 'Features', path: '/features' },
