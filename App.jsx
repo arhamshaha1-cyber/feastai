@@ -23,15 +23,30 @@ export default function App() {
   var location = useLocation()
 
   if (auth.loading) {
-    return (
-      <div style={{
-        minHeight: '100vh', display: 'flex', alignItems: 'center',
-        justifyContent: 'center', background: '#0A0A0F', flexDirection: 'column', gap: 16,
-      }}>
-         <div style={{ fontSize: 48 }}>FeastAI</div>
-        <p style={{ color: '#9CA3AF', fontFamily: '"DM Sans", sans-serif' }}>Loading FeastAI...</p>
-        </div>
-      
+  return (
+    <div
+      style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: '#0A0A0F',
+        flexDirection: 'column',
+        gap: 16,
+      }}
+    >
+      <div style={{ fontSize: 48 }}>FeastAI</div>
+
+      <p
+        style={{
+          color: '#9CA3AF',
+          fontFamily: '"DM Sans", sans-serif',
+        }}
+      >
+        Loading FeastAI...
+      </p>
+    </div>
+  )
   }
 
   var hideFooter = location.pathname === '/app'
