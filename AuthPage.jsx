@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Logo from '../components/Logo'
-import { useAuth } from '../hooks/useAuth'
-import { btnPrimary } from '../styles/theme'
+import Logo from './Logo.jsx'
+import { useAuth } from './useAuth.js'
+import { btnPrimary } from './theme.js'
 
 export default function AuthPage({ mode }) {
   var navigate  = useNavigate()
