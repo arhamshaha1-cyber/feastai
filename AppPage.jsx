@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { generateRecipes } from './anthropic.js'
-import { RecipeCard, RecipeDetail } from '../components/RecipeCard'
+import { RecipeCard, RecipeDetail } from './RecipeCard.js'
 import { CUISINES, QUICK_INGREDIENTS, btnPrimary, btnGhost } from '../styles/theme'
 
 export default function AppPage({ user }) {
