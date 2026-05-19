@@ -6,7 +6,7 @@ import {
   onAuthStateChanged,
   updateProfile,
 } from 'firebase/auth'
-import { auth, configured } from '../lib/firebase'
+import { auth, configured } from './firebase.js'
 
 function toFriendly(code) {
   var map = {
