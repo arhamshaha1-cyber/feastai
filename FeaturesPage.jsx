@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { btnPrimary } from '../styles/theme'
+import { btnPrimary } from './theme.js'
 
 var LIST = [
   { icon: '🤖', color: '#FF6B35', title: 'Claude AI Recipe Engine',   desc: "Powered by Anthropic's Claude — one of the most advanced AI models available. It understands cultural nuances, regional flavour profiles, and cooking techniques across all major world cuisines." },
