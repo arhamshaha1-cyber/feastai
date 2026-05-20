@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { generateRecipes } from './anthropic.js'
 import { RecipeCard, RecipeDetail } from './RecipeCard.jsx'
-import { CUISINES, QUICK_INGREDIENTS, btnPrimary, btnGhost } from '../styles/theme'
+import { CUISINES, QUICK_INGREDIENTS, btnPrimary, btnGhost } from './theme.js'
 
 export default function AppPage({ user }) {
   var navigate = useNavigate()
