@@ -57,7 +57,7 @@ body: JSON.stringify({
       ]
     }
   ]
-}))
+})
 
   if (!res.ok) {
     const e = await res.json().catch(() => ({}))
