@@ -1,5 +1,5 @@
-const KEY = import.meta.env.VITE_ANTHROPIC_API_KEY
-const URL = 'https://api.anthropic.com/v1/messages'
+const KEY = import.meta.env.VITE_GEMINI_API_KEY
+const URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${KEY}`
 
 function prompt(ingredients, cuisine, budget) {
   const note = budget
@@ -45,17 +45,19 @@ export async function generateRecipes(ingredients, cuisine, budget) {
   const res = await fetch(URL, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': KEY,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true',
-    },
-    body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 2000,
-      messages: [{ role: 'user', content: prompt(ingredients, cuisine, budget) }],
-    }),
-  })
+  'Content-Type': 'application/json',
+},
+body: JSON.stringify({
+  contents: [
+    {
+      parts: [
+        {
+          text: prompt(ingredients, cuisine, budget)
+        }
+      ]
+    }
+  ]
+})
 
   if (!res.ok) {
     const e = await res.json().catch(() => ({}))
@@ -63,7 +65,7 @@ export async function generateRecipes(ingredients, cuisine, budget) {
   }
 
   const data = await res.json()
-  const text = (data.content || []).map(function(b) { return b.text || '' }).join('')
+  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || ''
   const clean = text.replace(/```json/g, '').replace(/```/g, '').trim()
   const parsed = JSON.parse(clean)
 
