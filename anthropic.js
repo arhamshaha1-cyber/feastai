@@ -59,12 +59,13 @@ const res = await fetch(URL, {
       }
     ]
   })
+})
 
-      
-
-  if (!res.ok) {
-    const e = await res.json().catch(() => ({}))
-    throw new Error(e.error?.message || 'API error ' + res.status)
+if (!res.ok) {
+  const e = await res.json().catch(() => ({}))
+  throw new Error(e.error?.message || 'API error ' + res.status)
+                         
+    
   }
 
   const data = await res.json()
