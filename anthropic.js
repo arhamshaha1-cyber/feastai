@@ -42,22 +42,25 @@ export async function generateRecipes(ingredients, cuisine, budget) {
     throw new Error('MISSING_KEY')
   }
 
-  const res = await fetch(URL, {
-    method: 'POST',
-    headers: {
-  'Content-Type': 'application/json',
-},
-body: JSON.stringify({
-  contents: [
-    {
-      parts: [
-        {
-          text: prompt(ingredients, cuisine, budget)
-        }
-      ]
-    }
-  ]
-})
+  
+const res = await fetch(URL, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    contents: [
+      {
+        parts: [
+          {
+            text: prompt(ingredients, cuisine, budget)
+          }
+        ]
+      }
+    ]
+  })
+
+      
 
   if (!res.ok) {
     const e = await res.json().catch(() => ({}))
