@@ -1,4 +1,4 @@
-const KEY = import.meta.env.VITE_GEMINI_API_KEY
+const KEY = import.meta.env.VITE_ANTHROPIC_API_KEY
 const URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${KEY}`
 
 function prompt(ingredients, cuisine, budget) {
