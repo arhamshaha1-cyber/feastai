@@ -38,7 +38,7 @@ export default function AppPage({ user }) {
       if (err.message === 'MISSING_KEY') {
         setError('Add VITE_ANTHROPIC_API_KEY to your .env file to enable AI recipes. See README.md.')
       } else {
-        setError('Request failed: ' + err.message)
+        setError('AI is busy right now. Please try again.')
       }
     }
     setLoading(false)
