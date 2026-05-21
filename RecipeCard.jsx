@@ -15,7 +15,7 @@ export function RecipeCard({ recipe, onClick, selected }) {
       }}
     >
       <img
-  src={`https://source.unsplash.com/600x400/?${r.name},food`}
+  src={`https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80`}
   alt={r.name}
   style={{
     width: '100%',
