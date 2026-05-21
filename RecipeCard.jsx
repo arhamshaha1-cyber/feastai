@@ -14,6 +14,18 @@ export function RecipeCard({ recipe, onClick, selected }) {
         transition: 'border-color 0.2s, background 0.2s',
       }}
     >
+      <img
+  src={`https://source.unsplash.com/600x400/?${r.name},food`}
+  alt={r.name}
+  style={{
+    width: '100%',
+    height: 180,
+    objectFit: 'cover',
+    borderRadius: 16,
+    marginBottom: 14,
+    border: '1px solid rgba(255,255,255,0.08)'
+  }}
+/>
       <div style={{ fontSize: 42, marginBottom: 14 }}>{r.emoji}</div>
 
       <h3
