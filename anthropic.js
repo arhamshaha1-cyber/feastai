@@ -58,7 +58,7 @@ const res = await fetch(URL, {
         ]
       }
     ]
-  })
+  });
 
 
 if (!res.ok) {
