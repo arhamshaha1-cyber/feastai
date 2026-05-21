@@ -1,5 +1,5 @@
-const KEY = import.meta.env.VITE_ANTHROPIC_API_KEY
-const URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${KEY}`
+const KEY = import.meta.env.VITE_OPENROUTER_API_KEY
+const URL = 'https://openrouter.ai/api/v1/chat/completions'
 
 function prompt(ingredients, cuisine, budget) {
   const note = budget
@@ -46,20 +46,19 @@ export async function generateRecipes(ingredients, cuisine, budget) {
 const res = await fetch(URL, {
   method: 'POST',
   headers: {
-    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${KEY}`,
+    'Content-Type': 'application/json'
   },
   body: JSON.stringify({
-    contents: [
+    model: 'meta-llama/llama-3-8b-instruct:free',
+    messages: [
       {
-        parts: [
-          {
-            text: prompt(ingredients, cuisine, budget)
-          }
-        ]
+        role: 'user',
+        content: prompt(ingredients, cuisine, budget)
       }
     ]
+  })
 })
-});
 
 if (!res.ok) {
   const e = await res.json().catch(() => ({}))
@@ -69,7 +68,7 @@ if (!res.ok) {
   }
 
   const data = await res.json()
-  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || ''
+  const text = data.choices?.[0]?.message?.content || ''
   const clean = text.replace(/```json/g, '').replace(/```/g, '').trim()
   const parsed = JSON.parse(clean)
 
