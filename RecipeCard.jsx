@@ -11,7 +11,13 @@ export function RecipeCard({ recipe, onClick, selected }) {
         borderRadius: 18,
         padding: 24,
         cursor: 'pointer',
-        transition: 'border-color 0.2s, background 0.2s',
+        transition: 'all 0.3s ease',
+        transform: selected ? 'translateY(-6px) scale(1.02)' : 'translateY(0) scale(1)',
+backdropFilter: 'blur(12px)',
+boxShadow: selected
+  ? '0 12px 40px rgba(255,107,53,0.25)'
+  : '0 8px 30px rgba(0,0,0,0.35)',
+overflow: 'hidden',
       }}
     >
       <img
