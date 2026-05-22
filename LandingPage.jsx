@@ -32,20 +32,42 @@ export default function LandingPage() {
     <div>
       {/* HERO */}
       <section
-        style={{
-          minHeight: '92vh',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          padding: '100px 24px 80px',
-          background:
-            'radial-gradient(ellipse 80% 55% at 50% 0%, rgba(255,107,53,0.11) 0%, transparent 70%)',
-        }}
+        background:
+'radial-gradient(circle at top, rgba(255,107,53,0.22), transparent 45%), linear-gradient(180deg, #09090F 0%, #0F0F17 100%)',
+overflow: 'hidden',
+position: 'relative',
       >
+      <div
+  style={{
+    position: 'absolute',
+    width: 500,
+    height: 500,
+    borderRadius: '50%',
+    background: 'rgba(255,107,53,0.12)',
+    filter: 'blur(120px)',
+    top: -120,
+    right: -120,
+    zIndex: 0,
+  }}
+/>
+
+<div
+  style={{
+    position: 'absolute',
+    width: 400,
+    height: 400,
+    borderRadius: '50%',
+    background: 'rgba(255,255,255,0.04)',
+    filter: 'blur(100px)',
+    bottom: -100,
+    left: -100,
+    zIndex: 0,
+  }}
+/>
         <div
           style={Object.assign({}, fade(0), {
+            position: 'relative',
+zIndex: 2,
             display: 'inline-flex',
             alignItems: 'center',
             gap: 8,
