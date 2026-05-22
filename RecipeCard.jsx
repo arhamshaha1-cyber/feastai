@@ -8,8 +8,9 @@ export function RecipeCard({ recipe, onClick, selected }) {
         border: selected
           ? '1px solid rgba(255,107,53,0.4)'
           : '1px solid rgba(255,255,255,0.08)',
-        borderRadius: 18,
+        borderRadius: 24,
         padding: 24,
+        backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02))',
         cursor: 'pointer',
         transition: 'all 0.3s ease',
         transform: selected ? 'translateY(-6px) scale(1.02)' : 'translateY(0) scale(1)',
@@ -21,6 +22,8 @@ overflow: 'hidden',
       }}
     >
       <img
+        onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'}
+onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
   src={`https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80`}
   alt={r.name}
   style={{
@@ -29,7 +32,8 @@ overflow: 'hidden',
     objectFit: 'cover',
     borderRadius: 16,
     marginBottom: 14,
-    border: '1px solid rgba(255,255,255,0.08)'
+    border: '1px solid rgba(255,255,255,0.08)',
+    transition: 'transform 0.4s ease',
   }}
 />
       <div style={{ fontSize: 42, marginBottom: 14 }}>{r.emoji}</div>
