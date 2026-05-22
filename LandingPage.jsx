@@ -36,6 +36,7 @@ export default function LandingPage() {
   background:
     'radial-gradient(circle at top, rgba(255,107,53,0.22), transparent 45%), linear-gradient(180deg, #09090F 0%, #0F0F17 100%)',
   overflow: 'hidden',
+          animation: 'fadeIn 1.2s ease',
   position: 'relative',
 }}
       >
@@ -293,3 +294,32 @@ zIndex: 2,
     </div>
   )
 }
+
+const style = document.createElement('style')
+
+style.innerHTML = `
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+`
+
+document.head.appendChild(style)
