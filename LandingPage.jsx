@@ -64,6 +64,8 @@ export default function LandingPage() {
     bottom: -100,
     left: -100,
     zIndex: 0,
+    }}
+/>
     <div
   style={{
     position: 'absolute',
@@ -79,7 +81,7 @@ export default function LandingPage() {
   }}
 />
   
-/>
+
         <div
           style={Object.assign({}, fade(0), {
             position: 'relative',
