@@ -64,7 +64,21 @@ export default function LandingPage() {
     bottom: -100,
     left: -100,
     zIndex: 0,
+    <div
+  style={{
+    position: 'absolute',
+    width: 300,
+    height: 300,
+    borderRadius: '50%',
+    background: 'rgba(255,140,80,0.08)',
+    filter: 'blur(90px)',
+    bottom: -80,
+    right: -80,
+    animation: 'float 8s ease-in-out infinite',
+    zIndex: 0,
   }}
+/>
+  
 />
         <div
           style={Object.assign({}, fade(0), {
