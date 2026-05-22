@@ -226,7 +226,13 @@ zIndex: 2,
             display: 'flex',
             gap: 48,
             flexWrap: 'wrap',
-            justifyContent: 'center',
+            alignItems: 'center',
+padding: '24px',
+backdropFilter: 'blur(20px)',
+background: 'rgba(255,255,255,0.03)',
+borderRadius: 28,
+border: '1px solid rgba(255,255,255,0.08)',
+boxShadow: '0 20px 60px rgba(0,0,0,0.35)',
           })}
         >
           {[
