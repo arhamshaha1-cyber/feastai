@@ -76,7 +76,7 @@ export default function LandingPage() {
       Try Free
     </button>
   </nav>
-    <div>
+    
       {/* HERO */}
       <section
         style={{
