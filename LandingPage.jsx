@@ -29,6 +29,53 @@ export default function LandingPage() {
   }
 
   return (
+    <>
+  <nav
+    style={{
+      position: 'fixed',
+      top: 20,
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width: '92%',
+      maxWidth: 1200,
+      padding: '14px 24px',
+      borderRadius: 22,
+      backdropFilter: 'blur(18px)',
+      background: 'rgba(15,15,23,0.55)',
+      border: '1px solid rgba(255,255,255,0.08)',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      zIndex: 999,
+      boxShadow: '0 10px 40px rgba(0,0,0,0.35)',
+    }}
+  >
+    <div
+      style={{
+        color: '#fff',
+        fontSize: 20,
+        fontWeight: 700,
+        letterSpacing: 1,
+      }}
+    >
+      FeastAI
+    </div>
+
+    <button
+      style={{
+        background: 'linear-gradient(135deg,#FF6B35,#A78BFA)',
+        border: 'none',
+        color: '#fff',
+        padding: '12px 22px',
+        borderRadius: 14,
+        fontWeight: 700,
+        cursor: 'pointer',
+        boxShadow: '0 10px 30px rgba(255,107,53,0.35)',
+      }}
+    >
+      Try Free
+    </button>
+  </nav>
     <div>
       {/* HERO */}
       <section
@@ -309,7 +356,8 @@ zIndex: 2,
           Get Started — It's Free
         </button>
       </section>
-    </div>
+      </>
+    
   )
 }
 
