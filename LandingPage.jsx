@@ -32,10 +32,12 @@ export default function LandingPage() {
     <div>
       {/* HERO */}
       <section
-        background:
-'radial-gradient(circle at top, rgba(255,107,53,0.22), transparent 45%), linear-gradient(180deg, #09090F 0%, #0F0F17 100%)',
-overflow: 'hidden',
-position: 'relative',
+        style={{
+  background:
+    'radial-gradient(circle at top, rgba(255,107,53,0.22), transparent 45%), linear-gradient(180deg, #09090F 0%, #0F0F17 100%)',
+  overflow: 'hidden',
+  position: 'relative',
+}}
       >
       <div
   style={{
