@@ -236,13 +236,31 @@ zIndex: 2,
           {FEATURES.map(function(f, i) {
             return (
               <div
-                key={i}
-                style={{
-                  background: 'rgba(255,255,255,0.04)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: 18,
-                  padding: 28,
-                }}
+  key={i}
+
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = 'translateY(-10px)'
+    e.currentTarget.style.boxShadow = '0 20px 60px rgba(255,107,53,0.25)'
+  }}
+
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = 'translateY(0)'
+    e.currentTarget.style.boxShadow = '0 10px 40px rgba(0,0,0,0.35)'
+  }}
+
+  style={{
+    background: 'rgba(255,255,255,0.06)',
+    border: '1px solid rgba(255,255,255,0.12)',
+    borderRadius: 24,
+    padding: 28,
+    backdropFilter: 'blur(18px)',
+    boxShadow: '0 10px 40px rgba(0,0,0,0.35)',
+    transition: 'all 0.35s ease',
+    cursor: 'pointer',
+    transform: 'translateY(0)',
+  }}
+>
+  
               >
                 <div style={{ fontSize: 38, marginBottom: 14 }}>{f.icon}</div>
                 <h3 style={{ color: '#F9FAFB', fontSize: 17, fontWeight: 700, marginBottom: 10 }}>
