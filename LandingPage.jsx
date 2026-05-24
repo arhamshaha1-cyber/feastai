@@ -390,6 +390,21 @@ style.innerHTML = `
   to {
     opacity: 1;
     transform: translateY(0);
+  }}
+@keyframes pulse {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+
+  100% {
+    opacity: 0.7;
+    transform: scale(0.98);
   }
 }
 `
