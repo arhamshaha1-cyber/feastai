@@ -35,7 +35,21 @@ export default function App() {
         gap: 16,
       }}
     >
-      <div style={{ fontSize: 48 }}>FeastAI</div>
+      <div
+  style={{
+    fontSize: 56,
+    fontWeight: 900,
+    fontFamily: "'Playfair Display', serif",
+    background: 'linear-gradient(135deg, #FF6B35, #FFB347)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    animation: 'pulse 2s ease-in-out infinite',
+    letterSpacing: 1,
+  }}
+>
+  FeastAI
+</div>
+    
 
       <p
         style={{
@@ -43,7 +57,7 @@ export default function App() {
           fontFamily: '"DM Sans", sans-serif',
         }}
       >
-        Loading FeastAI...
+        Preparing your AI kitchen experience...
       </p>
     </div>
   )
